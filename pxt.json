@@ -1,18 +1,27 @@
 {
-    "name": "pxt-radiorollbacktest",
-    "version": "0.0.0",
-    "description": "",
-    "dependencies": {
-        "core": "*",
-        "radio": "*"
-    },
+    "name": "radio",
+    "description": "The radio services",
     "files": [
         "README.md",
-        "main.ts"
+        "shims.d.ts",
+        "enums.d.ts",
+        "radio.cpp",
+        "radio.ts",
+        "deprecated.ts"
     ],
-    "testFiles": [
-        "test.ts"
-    ],
-    "public": false,
-    "additionalFilePaths": []
+    "icon": "./static/packages/radio/icon.png",
+    "public": true,
+    "dependencies": {
+        "core": "file:../core"
+    },
+    "yotta": {
+        "config": {
+            "microbit-dal": {
+                "bluetooth": {
+                    "enabled": 0
+                }
+            }
+        }
+    },
+    "installedVersion": "rlfgis"
 }
